@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    // 확장
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier:/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:security/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    // 규칙
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ]
+  },
+  "env": { "browser": true, "node": true },
+  "parser": "@typescript-eslint/parser"
+}
